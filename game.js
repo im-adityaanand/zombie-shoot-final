@@ -11,9 +11,7 @@ const img = [
   "zombie-6.png",
 ];
 // Iteration 1.2: Add shotgun sound
-const expAudio = new Audio(
-  "https://freespecialeffects.co.uk/soundfx/weapons/shotgun_3.wav"
-);
+const expAudio = new Audio("./assets/shotgun.wav");
 expAudio.volume = 0.2;
 gameBody.onclick = () => {
   expAudio.pause();
@@ -21,17 +19,15 @@ gameBody.onclick = () => {
   expAudio.play();
 };
 // Iteration 1.3: Add background sound
-const backgroundSound = new Audio(
-  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/250758/soundtrack.mp3"
-);
+const backgroundSound = new Audio("./assets/bgm.mp3");
 backgroundSound.play();
 backgroundSound.loop = true;
 
-//Iteration 1.4: Adding lives
+// Iteration 1.4: Add lives
 const maxlives = 4;
 var lives = 4;
 
-//Iteration 2: Write a function to make a zombie
+// Iteration 2: Write a function to make a zombie
 
 function makeZombie() {
   randomImage = img[getRandomInt(0, img.length)];
@@ -81,11 +77,11 @@ var timer = setInterval(function () {
   }
 }, 1000);
 
-//Iteration 6: Write a code to start the game by calling the first zombie
+// Iteration 6: Write a code to start the game by calling the first zombie
 
 makeZombie(zombieId);
 
-//Iteration 7: Write the helper function to get random integer
+// Iteration 7: Write the helper function to get random integer
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
